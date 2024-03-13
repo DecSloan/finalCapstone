@@ -28,7 +28,7 @@ df.head() shows you all the collumns but just the first 5 rows, usefull to see w
 
     df.head()
 
-insert screen shot 
+<img width="904" alt="Screenshot 2024-03-13 at 17 13 57" src="https://github.com/skills-cogrammar/C6-Data-Science-Lecture-Backpack/assets/153734997/b285cfd7-fa5f-4127-a03f-95779e41b3cc">
 
 From here we can see which data is useful for us and which isn't, for example we just need the data that is linked with the reviews. So here we can make a new dataframe from the original dataset, only including the columns that have the desired data - 'reviews.text' and 'reviews.title'. 
 
@@ -37,7 +37,7 @@ This new dataframe should be seperate to the main dataset as we don't want to al
     reviews_data = df[['reviews.text', 'reviews.title']]
     reviews_data
 
-screenshot 2 
+<img width="644" alt="Screenshot 2024-03-13 at 17 14 19" src="https://github.com/skills-cogrammar/C6-Data-Science-Lecture-Backpack/assets/153734997/68511857-6467-4ad4-8876-38008a05e071"> 
 
 Now we just have the 2 columns with the data that we are looking at. 
 
@@ -67,7 +67,7 @@ It now has 3 columns with the added processed.text column.
 
     reviews_data
 
-screenshot 3 
+<img width="886" alt="Screenshot 2024-03-13 at 17 15 10" src="https://github.com/skills-cogrammar/C6-Data-Science-Lecture-Backpack/assets/153734997/4ace6e1e-01df-4af2-8cc2-073cd58c3ead">
 
 Now we want to create a function for sentiment analysis, one that takes in a product review as an input and predicts its sentiment.
 
@@ -105,7 +105,7 @@ Now we can see the added columns to our dataset
 
     reviews_data
 
-screenshot 4
+<img width="883" alt="Screenshot 2024-03-13 at 17 15 55" src="https://github.com/skills-cogrammar/C6-Data-Science-Lecture-Backpack/assets/153734997/c833dc93-ab4e-4318-82ee-799ec4cb18c8">
 
 It would be a great idea now to check some of the reviews and see if the function is working properly and giving us some good results.
 
@@ -113,39 +113,41 @@ To do this lets take a few samples from our data and check we get a similar pola
 
     reviews_data.loc[83]
 
-screenshot 5
+<img width="541" alt="Screenshot 2024-03-13 at 17 16 41" src="https://github.com/skills-cogrammar/C6-Data-Science-Lecture-Backpack/assets/153734997/84c89ffe-6fa4-4c88-83db-e6bbc3619ef7">
 
     reviews_data.loc[973]
 
-screenshot 6
+<img width="540" alt="Screenshot 2024-03-13 at 17 16 54" src="https://github.com/skills-cogrammar/C6-Data-Science-Lecture-Backpack/assets/153734997/81df3678-ecf7-4ec2-b36d-156efc102b77">
 
     reviews_data.loc[1345]
 
-screenshot 7 
+<img width="535" alt="Screenshot 2024-03-13 at 17 17 04" src="https://github.com/skills-cogrammar/C6-Data-Science-Lecture-Backpack/assets/153734997/89d1adf1-4e29-4c60-b2ce-ea48c8c2e2cd">
 
     reviews_data.loc[1953]
 
-screenshot 8
+<img width="533" alt="Screenshot 2024-03-13 at 17 17 15" src="https://github.com/skills-cogrammar/C6-Data-Science-Lecture-Backpack/assets/153734997/1fb001f2-8359-4742-924b-86c514166470">
 
     reviews_data.loc[2864]
 
-screenshot 9
+<img width="534" alt="Screenshot 2024-03-13 at 17 17 24" src="https://github.com/skills-cogrammar/C6-Data-Science-Lecture-Backpack/assets/153734997/68f09524-dfb9-4ad0-aec2-604dd65afbf5">
 
     reviews_data.loc[3027]
 
-screenshot 10
+<img width="534" alt="Screenshot 2024-03-13 at 17 17 34" src="https://github.com/skills-cogrammar/C6-Data-Science-Lecture-Backpack/assets/153734997/863f637b-5b48-4f63-a32b-b021fdcdf22a">
 
     reviews_data.loc[3865]
 
-screenshot 11
+<img width="532" alt="Screenshot 2024-03-13 at 17 17 43" src="https://github.com/skills-cogrammar/C6-Data-Science-Lecture-Backpack/assets/153734997/ae4b768c-21d6-454a-b364-f07fde8edb6b">
 
     reviews_data.loc[4493]
+
+<img width="536" alt="Screenshot 2024-03-13 at 17 17 53" src="https://github.com/skills-cogrammar/C6-Data-Science-Lecture-Backpack/assets/153734997/db3f409d-65a0-4a38-8dec-9fa0beb6dc7f">
 
 I didnt get any 'neutral' sentiment scores when I took some a random selection so I can manually searching for all polarity scores with a 0. There are 308 rows but this has brought up the first 5 and last 5 in the dataset. 
 
     reviews_data[reviews_data['polarity.score'] == 0]
-
-screenshot 12 
+    
+<img width="876" alt="Screenshot 2024-03-13 at 17 18 04" src="https://github.com/skills-cogrammar/C6-Data-Science-Lecture-Backpack/assets/153734997/d378b5d7-6508-4dbb-bacb-d9c134e4c7ef">
 
 We also didn't get many 'negative' results so we can do another manual search, here we searched for the 'negative' value in the sentiment column.
 
@@ -153,4 +155,5 @@ Again we have here the first 5 and last 5 in the dataset displayed, but we have 
 
     reviews_data[reviews_data['sentiment'] == 'negative']
 
-screenshot 13
+<img width="881" alt="Screenshot 2024-03-13 at 17 18 23" src="https://github.com/skills-cogrammar/C6-Data-Science-Lecture-Backpack/assets/153734997/7e843b5a-6bdc-4ef3-a3ae-4e22f6c1ef93">
+
