@@ -157,3 +157,7 @@ Again we have here the first 5 and last 5 in the dataset displayed, but we have 
 
 <img width="881" alt="Screenshot 2024-03-13 at 17 18 23" src="https://github.com/skills-cogrammar/C6-Data-Science-Lecture-Backpack/assets/153734997/7e843b5a-6bdc-4ef3-a3ae-4e22f6c1ef93">
 
+
+**Usage Section**
+
+Below are links to folders 
